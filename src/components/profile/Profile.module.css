@@ -1,0 +1,11 @@
+.user-card-content {
+    border-radius: 4px;
+    width: 100px;
+    margin: 8px;
+    padding: 12px 16px;
+    background-color: gray;
+    color: white;
+}
+.user-stats-content {
+    background-color: red;
+}
