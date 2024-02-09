@@ -1,10 +1,12 @@
-// import css from "./Profile.module"
+//імпорт CSS-модуля
+import css from "./Profile.module.css";
 
-export const Profile = ({ props:{ name, tag, location, image = "https://cdn-icons-png.flaticon.com/512/1077/1077012.png", stats: { followers, views, likes } } }) => {
+
+export const Profile = ({ name, tag, location, image = "https://cdn-icons-png.flaticon.com/512/1077/1077012.png", stats: { followers, views, likes } } ) => {
     return (
-        <div>
-            <div className={"user-card-content"}>
-                <img
+        <div className={css.card}>
+            <div className={css.userCardContent}>
+                <img className={css.userImg}
                     src={image}
                     alt="User avatar"
                 />
@@ -12,18 +14,18 @@ export const Profile = ({ props:{ name, tag, location, image = "https://cdn-icon
                 <p>@{tag}</p>
                 <p>{location}</p>
             </div>
-            <ul className={"user-stats-content"}>
-                <li>
-                    <span>Followers</span>
-                    <span>{followers}</span>
+            <ul className={css.userStatsList}>
+                <li className={css.userStatsItem}>
+                    <span className={css.userStatsTitle}>Followers</span>
+                    <span className={css.userStatsAmount}>{followers}</span>
                 </li>
-                <li>
-                    <span>Views</span>
-                    <span>{views}</span>
+                <li className={css.userStatsItem}>
+                    <span className={css.userStatsTitle}>Views</span>
+                    <span className={css.userStatsAmount}>{views}</span>
                 </li>
-                <li>
-                    <span>Likes</span>
-                    <span>{likes}</span>
+                <li className={css.userStatsItem}>
+                    <span className={css.userStatsTitle}>Likes</span>
+                    <span className={css.userStatsAmount}>{likes}</span>
                 </li>
             </ul>
         </div>        
