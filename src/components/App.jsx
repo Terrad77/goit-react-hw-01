@@ -1,17 +1,12 @@
-// import { useState } from 'react'
 import './App.css'
 
 import userData from "../userData.json";
+import friends from "../friends.json";
+import transactions from "../transactions.json";
+
 import { Profile } from './profile/Profile';
 import { FriendList } from './friend_list/FriendList';
-import friends from "../friends.json";
-
-// import transactions from "../transactions.json";
-
-// створіть у папці src файл userData.json, перенесіть туди дані користувача, відформатуйте їх у формат JSON
-// console.log(JSON.stringify(friends));
-
-
+import { TransactionHistory } from './transaction_history/TransactionHistory';
 
 export const App = () => {
   return (
@@ -24,7 +19,7 @@ export const App = () => {
         stats={userData.stats}
       />
       <FriendList friends={friends} />
-      {/* <TransactionHistory items={transactions} /> */}
+      <TransactionHistory items={transactions} />
     </>
   );
 };
