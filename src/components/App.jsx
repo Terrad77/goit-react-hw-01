@@ -1,28 +1,15 @@
-import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
+// import { useState } from 'react'
 import './App.css'
-import Profile from './profile/Profile';
-// import Profile from './components/profile/Profile';
 
 import userData from "../userData.json";
-// import friends from "../friends.json";
+import { Profile } from './profile/Profile';
+import { FriendList } from './friend_list/FriendList';
+import friends from "../friends.json";
+
 // import transactions from "../transactions.json";
 
-// const userData = {
-//   username: "Jacques Gluke",
-//   tag: "jgluke",
-//   location: "Ocho Rios, Jamaica",
-//   avatar: "https://cdn-icons-png.flaticon.com/512/2922/2922506.png",
-//   stats: {
-//     followers: 5603,
-//     views: 4827,
-//     likes: 1308
-//   }
-// };
-
 // створіть у папці src файл userData.json, перенесіть туди дані користувача, відформатуйте їх у формат JSON
-// console.log(JSON.stringify(userData));
+// console.log(JSON.stringify(friends));
 
 
 
@@ -36,8 +23,8 @@ export const App = () => {
         image={userData.avatar}
         stats={userData.stats}
       />
-      {/* <FriendList friends={friends} />
-      <TransactionHistory items={transactions} /> */}
+      <FriendList friends={friends} />
+      {/* <TransactionHistory items={transactions} /> */}
     </>
   );
 };

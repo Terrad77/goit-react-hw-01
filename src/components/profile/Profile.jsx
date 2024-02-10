@@ -10,9 +10,9 @@ export const Profile = ({ name, tag, location, image = "https://cdn-icons-png.fl
                     src={image}
                     alt="User avatar"
                 />
-                <p>{name}</p>
-                <p>@{tag}</p>
-                <p>{location}</p>
+                <p className={css.userName}>{name}</p>
+                <p className={css.userTag}>@{" " }{tag}</p>
+                <p className={css.userLocation}>{location}</p>
             </div>
             <ul className={css.userStatsList}>
                 <li className={css.userStatsItem}>
@@ -32,4 +32,3 @@ export const Profile = ({ name, tag, location, image = "https://cdn-icons-png.fl
 
     );
 };
-export default Profile;
