@@ -2,7 +2,7 @@
 import css from "./Profile.module.css";
 
 
-export const Profile = ({ name, tag, location, image = "https://cdn-icons-png.flaticon.com/512/1077/1077012.png", stats: { followers, views, likes } } ) => {
+const Profile = ({ name, tag, location, image = "https://cdn-icons-png.flaticon.com/512/1077/1077012.png", stats: { followers, views, likes } } ) => {
     return (
         <div className={css.card}>
             <div className={css.userCardContent}>
@@ -32,3 +32,4 @@ export const Profile = ({ name, tag, location, image = "https://cdn-icons-png.fl
 
     );
 };
+export default Profile;
